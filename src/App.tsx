@@ -1,15 +1,19 @@
 import { Vue, Component } from 'vue-property-decorator'
 
+import Layout from './components/Layout'
+import Navbar from './components/Navbar'
 @Component
 export default class App extends Vue {
   protected render() {
     return (
-      <div id="app">
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
+      <div>
+        <Navbar>
+          <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
-        </div>
-        <router-view />
+        </Navbar>
+        <Layout>
+          <router-view />
+        </Layout>
       </div>
     )
   }

@@ -1,19 +1,32 @@
 import { Vue, Component, Prop } from 'vue-property-decorator'
 import styled from 'vue-styled-components'
+import tw from 'twin.macro'
 
-import { VueRouter } from '../router'
-const A = styled.div`
-  background: red;
+const InputProps = { hasHover: Boolean }
+
+const Input = styled('div', InputProps)`
+  ${tw`border-4 border-gray-400 bg-gray-200 box-border p-20 `}
 `
-Vue.use(VueRouter)
-let RouterLink = Vue.component('RouterLink')
-console.log(RouterLink)
-RouterLink = Vue.extend(RouterLink)
-console.log(RouterLink)
 
-console.log(A)
-const Link = styled(RouterLink)`
-  color: green;
+const StyledLink = styled.div`
+  display: inline-block;
+
+  & > a {
+    margin: 0 0.75rem;
+    height: 40px;
+    display: inline-block;
+    color: #888888;
+    text-decoration: none;
+    transition: color 0.25s;
+  }
+
+  & > a.router-link-exact-active {
+    color: #522cad;
+  }
+
+  & > a:hover {
+    color: #522cad;
+  }
 `
 
 @Component
@@ -22,13 +35,12 @@ export default class HelloWorld extends Vue {
   protected render() {
     return (
       <div class="hello">
-        <A>
-          <h1>{this.msg}</h1>
-
-          <Link to="/about"> Custom Link to About Page,</Link>
-        </A>
+        <StyledLink>
+          <router-link to="/about"> go to About</router-link>
+        </StyledLink>
 
         <p>
+          <Input hasHover={true}>dsadasdasdsa</Input>
           For a guide and recipes on how to configure / customize this project,
           <br />
           check out the
