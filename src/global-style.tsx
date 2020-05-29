@@ -21,7 +21,7 @@ export default injectGlobal`
   }
 
   body {
-    ${tw`font-sans text-gray-900 w-full h-full overflow-x-hidden`};
+    ${tw`font-sans text-gray-900 w-full h-full overflow-x-hidden bg-fixed`};
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     -webkit-text-size-adjust: 100%;
     

@@ -5,7 +5,7 @@ import tw from 'twin.macro'
 const InputProps = { hasHover: Boolean }
 
 const Input = styled('div', InputProps)`
-  ${tw`border-4 border-gray-400 bg-gray-200 box-border p-20 `}
+  ${tw`border-4 border-gray-400 bg-gray-200 box-border p-20 text-myColor`}
 `
 
 const StyledLink = styled.div`
@@ -18,10 +18,6 @@ const StyledLink = styled.div`
     color: #888888;
     text-decoration: none;
     transition: color 0.25s;
-  }
-
-  & > a.router-link-exact-active {
-    color: #522cad;
   }
 
   & > a:hover {
