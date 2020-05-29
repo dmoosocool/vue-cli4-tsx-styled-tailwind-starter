@@ -13,6 +13,7 @@ import Example2 from '../assets/example_code/example2.png'
 import Example3 from '../assets/example_code/example3.png'
 import Example4 from '../assets/example_code/example4.png'
 import Example4Css from '../assets/example_code/example4_css.png'
+import Example5 from '../assets/example_code/example5.png'
 
 const HomeLogo = styled.img`
   ${tw`object-cover inline-block cursor-pointer shadow`}
@@ -177,7 +178,7 @@ export default class HomePage extends Vue {
             <Example>
               <CodePre
                 class="w-1/2 inline-block align-top"
-                src={Example4}
+                src={Example5}
               ></CodePre>
               <div class="w-1/2 inline-block align-top text-center">
                 <BorderTwBtn>BorderTwBtn Component</BorderTwBtn>
