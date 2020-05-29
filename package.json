@@ -11,6 +11,7 @@
   "dependencies": {
     "autoprefixer": "^9.8.0",
     "core-js": "^3.6.4",
+    "lodash.template": "^4.5.0",
     "module": "^1.2.5",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "^1.4.6",
